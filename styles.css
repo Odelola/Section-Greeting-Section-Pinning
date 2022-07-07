@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section p{
+    font-size: 1.2rem;
+    padding: 5rem;
+    color: #fff;
+}
+.container .one{
+    background: #0000ff;
+}
+.container .two{
+    background: #91fe45 !important;
+}
+.container .three{
+    background: #c45ea3;
+}
+.container .four{
+    background: #ee34e3;
+}
+.container .five{
+    background: #aa4ae3;
+}
