@@ -1,19 +1,99 @@
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scroll-progress{
+    position: fixed;
+    bottom: 3.5%;
+    right: 5%;
+    z-index: 100;
+    width: 100px;
+    height: 30px;
+    background: #fff;
+}
+.scroll-progress_bar{
+    width: 70%;
+    height: 100%;
+    background: #000;
 }
 section{
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 section p{
-    font-size: 1.2rem;
-    padding: 5rem;
+    font-size: 4rem;
+    letter-spacing: 1.4px;
     color: #fff;
 }
 .container .one{
     background: #0000ff;
+    position: relative;
+}
+.container .one .scroll-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    width: 300px;
+    height: 50px;
+    position: fixed;
+    left: 50%;
+    bottom: 3.5%;
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.container .one .scroll-animation img{
+    filter: invert(30);
+    -webkit-filter: invert(30);
+    animation: scroll-down 1.5s ease-in-out  reverse infinite;
+    -webkit-animation: scroll-down 1.5s ease-in-out  reverse infinite;
+}
+.container .one .scroll-animation p{
+    font-size: 1.3em;
+}
+@keyframes scroll-down{
+    to{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+    }
+}
+@-o-keyframes scroll-down{
+    to{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+    }
+}
+@-moz-keyframes scroll-down{
+    to{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+    }
 }
 .container .two{
     background: #91fe45 !important;
@@ -26,4 +106,13 @@ section p{
 }
 .container .five{
     background: #aa4ae3;
+}
+@media (min-width: 300px) and (max-width: 600px){
+    section{
+        padding: 15px;
+    }
+    section p{
+        font-size: 2rem;
+        letter-spacing: 1.4px;
+    }
 }
