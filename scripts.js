@@ -1,25 +1,19 @@
-const body = document.body;
-const html = document.documentElement;
-const scrollProgressBar = document.getElementsByClassName("scroll-progress_bar")[0];
-const firstSection = document.getElementsByClassName("two")[0];
-const height = Math.max(body.getBoundingClientRect().height, html.getBoundingClientRect().height);
-console.log(scrollProgressBar)
-console.log(height)
-console.log(firstSection.offsetWidth)
+const scrollProgressBarContainer = document.getElementsByClassName("circle-progress-container")[0];
+const scrollProgressBar = document.getElementsByClassName("circle-progress-container__progress")[0];
 
 function updateScrollProgress() {
-  // console.log(scrollProgressBar.offsetWidth)
-  console.log(window.scrollY)
+  const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const hasScrolled = (windowScroll / height) * 100;
+  scrollProgressBar.style.strokeDashoffset = 100 - hasScrolled;
 }
 
 updateScrollProgress();
 
 window.addEventListener("scroll", updateScrollProgress)
 
-
-
-  gsap.registerPlugin(ScrollTrigger);
-
+// GSAP EFFECT
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.utils.toArray(".container section").forEach((section) => {
   ScrollTrigger.create({

@@ -7,9 +7,26 @@
     <title>GSAP ANIMATION</title>
 </head>
 <body>
-    <div class="scroll-progress">
-        <div class="scroll-progress_bar"></div>
-    </div>
+    
+ <svg class="circle-progress-container" viewBox="2 -2 28 36" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="1">
+          <stop offset="0%" stop-color="#0000ff" />
+          <stop offset="30%" stop-color="#91fe45 " />
+          <stop offset="60%" stop-color="#c45ea3" />
+          <stop offset="90%" stop-color="#ee34e3" />
+          <stop offset="100%" stop-color="#aa4ae3" />
+        </linearGradient>
+      </defs>
+    <circle class="circle-progress-container__background" r="16" cx="16" cy="16"></circle>
+    <circle
+      class="circle-progress-container__progress"
+      r="16"
+      cx="16"
+      cy="16"
+    ></circle>
+  </svg>
+
     <div class="container">
         <section class="one">
             <div class="scroll-animation">
@@ -28,7 +45,7 @@
             <p>Dejame ser tu amigo?</p>
         </section>
         <section class="five">
-            <p>Muchas Gracias, Adios Hasta Luego</p>
+            <p>Muchas Gracias, Adios Hasta Luego.</p>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
