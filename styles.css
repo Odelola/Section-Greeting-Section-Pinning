@@ -15,11 +15,11 @@
 .circle-progress-container__background{
     fill: none;
     stroke: #dcdcdc;
-    stroke-width: 2px;
+    strokeWidth: 2px;
 }
 .circle-progress-container__progress{
     fill: none;
-    stroke-width: 2px;
+    strokeWidth: 2px;
     stroke: url(#progress-gradient);
     stroke-dasharray: 100  100;
     stroke-linecap: round;
